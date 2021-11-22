@@ -1,0 +1,147 @@
+.teaser-list {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  font-family: "Helvetica", "Tahoma";
+  max-width: 960px;
+  text-align: center;
+  width: 100%;
+}
+.teaser {
+  border: 5px solid transparent;
+  border-radius: 2px;
+  color: #333;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  vertical-align: top;
+  width: 33.33%;
+}
+.teaser:hover .teaser-date.animated .date {
+  transform: scale(1);
+}
+.teaser:hover .teaser-date.animated .bubble {
+  transform: scale(1);
+}
+.teaser-date {
+  position: absolute;
+  height: 100px;
+  right: 0;
+  top: 0;
+  width: 100px;
+  z-index: 1;
+}
+.teaser-date hr {
+  border-width: 2px;
+}
+.teaser-date p {
+  font-weight: bold;
+}
+.teaser-date p:nth-child(1) {
+  font-size: 24px;
+  line-height: 24px;
+}
+.teaser-date p:nth-child(2) {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+.teaser-date .bubble {
+  border-radius: 50%;
+  background-color: #37AA9C;
+  content: "";
+  height: 100px;
+  right: -20px;
+  position: absolute;
+  top: -20px;
+  transition: all 0.2s ease;
+  width: 100px;
+}
+.teaser-date .date {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  right: 20px;
+  text-align: center;
+  top: 10px;
+  transition: all 0.2s ease;
+  transition-delay: 0.2s;
+}
+.teaser-date.animated .bubble {
+  transform: scale(0);
+}
+.teaser-date.animated .date {
+  transform: scale(0);
+}
+.media {
+  height: 210px;
+  overflow: hidden;
+  position: relative;
+}
+.media img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  display: block;
+  width: 100%;
+}
+.body {
+  background-color: #37AA9C;
+  bottom: 0;
+  color: white;
+  padding: 0 10px 10px;
+  position: relative;
+  width: 100%;
+}
+.title {
+  font-size: 22px;
+  line-height: 44px;
+}
+.description {
+  font-size: 12px;
+  height: 60px;
+  letter-spacing: 1.2px;
+  line-height: 20px;
+  overflow: hidden;
+}
+.post-info {
+  *zoom: 1;
+  margin-top: 8px;
+}
+.post-info:before,
+.post-info:after {
+  content: "";
+  display: table;
+}
+.post-info:after {
+  clear: both;
+}
+.post-info .info {
+  float: left;
+  text-align: left;
+  width: 33.33%;
+}
+.post-info .info span {
+  vertical-align: middle;
+}
+.link {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+body {
+  background-color: #303030;
+}
+hr,
+p,
+.media {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,154 @@
+@import url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/584938/library.less");
+@import url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/584938/variables.less");
+
+@border: #3A4750;
+@teaser: #37AA9C;
+.teaser-list {
+  .center;
+  font-family: "Helvetica", "Tahoma";
+  max-width: 960px;
+  text-align: center;
+  width: 100%;
+}
+
+.teaser {
+  border: 5px solid transparent;
+  border-radius: 2px;
+  color: #333;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  vertical-align: top;
+  width: 33.33%;
+  &:hover .teaser-date.animated {
+    .date {
+      transform: scale(1);
+    }
+    .bubble {
+      transform: scale(1);
+    }
+  }
+}
+
+.teaser-date {
+  position: absolute;
+  height: 100px;
+  right: 0;
+  top: 0;
+  width: 100px;
+  z-index: 1;
+  hr {
+    border-width: 2px;
+  }
+  p {
+    font-weight: bold;
+    &:nth-child(1) {
+      font-size: 24px;
+      line-height: 24px;
+    }
+    &:nth-child(2) {
+      font-size: 14px;
+      line-height: 14px;
+      text-transform: uppercase;
+    }
+  }
+  .bubble {
+    border-radius: 50%;
+    background-color: @teaser;
+    content: "";
+    height: 100px;
+    right: -20px;
+    position: absolute;
+    top: -20px;
+    transition: all 0.2s ease;
+    width: 100px;
+  }
+  .date {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    right: 20px;
+    text-align: center;
+    top: 10px;
+    transition: all 0.2s ease;
+    transition-delay: 0.2s;
+  }
+  &.animated {
+    .bubble {
+      transform: scale(0);
+    }
+    .date {
+      transform: scale(0);
+    }
+  }
+}
+
+.media {
+  height: 210px;
+  overflow: hidden;
+  position: relative;
+  img {
+    .center;
+    display: block;
+    width: 100%;
+  }
+}
+
+.body {
+  background-color: @teaser;
+  bottom: 0;
+  color: white;
+  padding: 0 10px 10px;
+  position: relative;
+  width: 100%;
+}
+
+.title {
+  font-size: 22px;
+  line-height: 44px;
+}
+
+.description {
+  font-size: 12px;
+  height: 60px;
+  letter-spacing: 1.2px;
+  line-height: 20px;
+  overflow: hidden;
+}
+
+.post-info {
+  .clear;
+  margin-top: 8px;
+  .info {
+    float: left;
+    text-align: left;
+    width: 33.33%;
+    span {
+      vertical-align: middle;
+    }
+  }
+}
+
+.link {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+// ======================================
+// dev only
+body {
+  background-color: @body;
+}
+
+hr,
+p,
+.media {
+  margin: 0;
+  padding: 0;
+}
